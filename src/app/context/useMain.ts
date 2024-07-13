@@ -1,0 +1,70 @@
+import {
+    keepPreviousData,
+    useQuery,
+    useMutation,
+} from "@tanstack/react-query";
+import {
+    parseAsInteger,
+    parseAsString,
+    useQueryStates,
+} from "next-usequerystate";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { TFilter, TSort } from "../model.app";
+import { getPosts } from "@/api/posts";
+import { TSortBy } from "@/models/filter";
+
+export const useMain = () => {
+    // const router = useRouter()
+
+    const [filter, setFilter] = useQueryStates({
+        skip: parseAsInteger.withDefault(1),
+        limit: parseAsInteger.withDefault(10),
+        search: parseAsString.withDefault(''),
+    }, {
+        history: 'push',
+    })
+    const [sort, setSort] = useQueryStates({
+        sortBy: parseAsString.withDefault(''),
+        order: parseAsString.withDefault(''),
+    }, {
+        history: 'replace',
+    })
+
+    const handleChangeFilter = (value: TFilter) => setFilter(value);
+    const handleChangeSort = (value: TSort) => setSort(value);
+
+    const debounceSearch = useDebounce(filter.search, 500);
+
+    const { data, isFetching, } = useQuery({
+        queryKey: ['posts', filter, sort],
+        queryFn: () => getPosts({
+            limit: filter.limit,
+            search: debounceSearch,
+            skip: filter.skip,
+            order: sort.order,
+            sortBy: sort.sortBy as TSortBy,
+        }),
+        placeholderData: keepPreviousData,
+    })
+
+    const { mutate, isPending, data: dataMutation } = useMutation({ mutationFn: getPosts });
+
+    const handleGetData = () => mutate({
+        limit: filter.limit,
+        search: filter.search,
+        skip: filter.skip,
+        order: sort.order,
+        sortBy: sort.sortBy as TSortBy,
+    })
+
+    return {
+        data: data?.posts ?? [],
+        isFetching,
+        handleChangeFilter,
+        handleChangeSort,
+        dataMutation: dataMutation?.posts ?? [],
+        isPending,
+        handleGetData,
+    }
+}
