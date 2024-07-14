@@ -10,6 +10,7 @@ type ParamsGetPosts = {
     search: string;
     sortBy: TSortBy;
     order: string;
+    select: string;
 }
 
 export const getPosts = async (params: ParamsGetPosts): Promise<IResponseGetPost> => {

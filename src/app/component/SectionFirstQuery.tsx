@@ -4,10 +4,14 @@ import Table from "@/components/Table";
 import { columns } from "../config/table";
 import { useContext } from "react";
 import { MainContext } from "../context/Provider";
+import { optionType } from "../config/option";
+import { TFilterSelect } from "../model.app";
 
 const SectionFirstQuery: React.FC = () => {
     const {
-        data
+        data,
+        handleChangeFilter,
+        isFetching
     } = useContext(MainContext)
 
     return (
@@ -15,8 +19,8 @@ const SectionFirstQuery: React.FC = () => {
             <h2 className="text-2xl">First Query</h2>
 
             <div className="flex gap-3 items-center w-full px-4">
-                <InputSearch label="" onChange={() => { }} />
-                <InputSelect options={[]} onChange={() => { }} />
+                <InputSearch label="" onChange={(e) => handleChangeFilter({ search: e })} />
+                <InputSelect options={optionType} onChange={(e) => handleChangeFilter({ select: e as TFilterSelect })} />
             </div>
 
             <div className="w-full px-4">
@@ -24,6 +28,7 @@ const SectionFirstQuery: React.FC = () => {
                     data={data}
                     columns={columns}
                     border
+                    loading={isFetching}
                 />
             </div>
         </div>

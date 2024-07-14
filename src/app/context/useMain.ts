@@ -21,6 +21,7 @@ export const useMain = () => {
         skip: parseAsInteger.withDefault(1),
         limit: parseAsInteger.withDefault(10),
         search: parseAsString.withDefault(''),
+        select: parseAsString.withDefault(''),
     }, {
         history: 'push',
     })
@@ -37,12 +38,13 @@ export const useMain = () => {
     const debounceSearch = useDebounce(filter.search, 500);
 
     const { data, isFetching, } = useQuery({
-        queryKey: ['posts', filter, sort],
+        queryKey: ['posts', filter.limit, filter.skip, filter.select, debounceSearch, sort],
         queryFn: () => getPosts({
             limit: filter.limit,
             search: debounceSearch,
             skip: filter.skip,
             order: sort.order,
+            select: filter.select,
             sortBy: sort.sortBy as TSortBy,
         }),
         placeholderData: keepPreviousData,
@@ -54,6 +56,7 @@ export const useMain = () => {
         limit: filter.limit,
         search: filter.search,
         skip: filter.skip,
+        select: filter.select,
         order: sort.order,
         sortBy: sort.sortBy as TSortBy,
     })

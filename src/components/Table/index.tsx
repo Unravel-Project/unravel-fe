@@ -6,12 +6,13 @@ import {
     flexRender,
     ColumnDef,
 } from '@tanstack/react-table';
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 
 interface Props {
     columns: ColumnDef<any>[]
     data: any[]
     border?: boolean
+    loading?: boolean
 }
 
 const Table: React.FC<Props> = (props) => {
@@ -19,6 +20,7 @@ const Table: React.FC<Props> = (props) => {
         columns,
         data,
         border,
+        loading
     } = props;
 
     const currentColumns = useMemo(() => columns, [columns]);
@@ -64,19 +66,21 @@ const Table: React.FC<Props> = (props) => {
                         ))}
                     </thead>
                     <tbody>
-                        {table.getRowModel().rows.map(row => (
-                            <tr key={row.id}>
-                                {row.getVisibleCells().map(cell => (
-                                    <td key={cell.id} className={`${borderStyleData} pt-[14px] pb-[18px] px-3`}>
-                                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
+                        <Fragment>
+                            {!loading ? table.getRowModel().rows.map(row => (
+                                <tr key={row.id}>
+                                    {row.getVisibleCells().map(cell => (
+                                        <td key={cell.id} className={`${borderStyleData} pt-[14px] pb-[18px] px-3`}>
+                                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                        </td>
+                                    ))}
+                                </tr>
+                            )) : <tr><td className="text-center" colSpan={currentColumns.length}>Loading...</td></tr>}
+                        </Fragment>
                     </tbody>
                 </table>
                 <div className="flex-grow">
-                    {data.length <= 0 && (
+                    {!loading && data.length <= 0 && (
                         <div className={`${borderTable} flex flex-col justify-center items-center p-10 gap-2`}>
                             <p className="text-bold">Data Tidak Ditemukan</p>
                         </div>
