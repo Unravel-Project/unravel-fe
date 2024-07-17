@@ -20,4 +20,24 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: unravelmalang/unravel-fe:${{github.run_number}}
+          tags: unravelmalang/unravel-fe:latest
+
+  pulljobs:
+      runs-on: ubuntu-latest
+      steps:
+      - name: compose up
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+           cd ~/geo/appfe
+           echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker compose pull
+           echo ${{ secrets.SSH_PASSWORD }} | sudo docker compose up -d
+           
+            
+      
+    
+
