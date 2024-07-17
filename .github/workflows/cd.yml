@@ -24,6 +24,7 @@ jobs:
 
   pulljobs:
       runs-on: ubuntu-latest
+      needs: dockerbuild
       steps:
       - name: compose up
         uses: appleboy/ssh-action@master
