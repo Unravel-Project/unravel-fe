@@ -1,4 +1,4 @@
-import { TSortBy } from "@/models/filter";
+import { TSortBy } from "@/schemas/filter";
 
 export type TFilterSelect = 'title' | 'reactions';
 

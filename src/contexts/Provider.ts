@@ -2,7 +2,7 @@
 
 import { EPost } from "@/api/posts/post.entity";
 import { createContext } from "react";
-import { TFilter, TSort } from "../model.app";
+import { TFilter, TSort } from "@/app/model.app";
 
 interface IMainContext {
     data: EPost[];

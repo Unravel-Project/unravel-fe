@@ -1,7 +1,7 @@
 'use client';
 
-import { useMain } from "../context/useMain";
-import { MainContext } from "../context/Provider";
+import { useMain } from "@/contexts/useMain";
+import { MainContext } from "@/contexts/Provider";
 import SectionMutation from "./SectionMutation";
 import SectionFirstQuery from "./SectionFirstQuery";
 
