@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "../context/Provider";
+import { MainContext } from "../contexts/Provider";
 import Table from "@/components/Table";
 import { columns } from "../configs/table";
 import Button from "@/components/Button";

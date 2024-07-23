@@ -3,7 +3,7 @@ import InputSelect from "@/components/Input/InputSelect";
 import Table from "@/components/Table";
 import { columns } from "../configs/table";
 import { useContext } from "react";
-import { MainContext } from "../context/Provider";
+import { MainContext } from "../contexts/Provider";
 import { optionType } from "../configs/option";
 import { TFilterSelect } from "../app/model.app";
 

@@ -1,5 +1,5 @@
 import "@/app/maintenance.css";
-import Image from 'next/Image';
+import Image from 'next/image';
 import gridImg from "../../public/gridnew.png";
 
 const MaintenancePage: React.FC = () => {
