@@ -1,6 +1,6 @@
-import httpService from "@/services/http.service";
+import httpService from "@/lib/utils/http.service";
 import { IResponseGetPost } from "./post.entity";
-import { TSortBy } from "@/models/filter";
+import { TSortBy } from "@/schemas/filter";
 
 const SERVICE = '/posts'
 

@@ -8,11 +8,11 @@ import {
     parseAsString,
     useQueryStates,
 } from "next-usequerystate";
-import { useDebounce } from "@/hooks/useDebounce";
+import { useDebounce } from "@/lib/hooks/useDebounce";
 import { useRouter } from "next/router";
-import { TFilter, TSort } from "../model.app";
+import { TFilter, TSort } from "@/app/model.app";
 import { getPosts } from "@/api/posts";
-import { TSortBy } from "@/models/filter";
+import { TSortBy } from "@/schemas/filter";
 
 export const useMain = () => {
     // const router = useRouter()
