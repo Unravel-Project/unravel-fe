@@ -11,7 +11,7 @@ const isMaintenanceMode:boolean = String(process.env.NEXT_PUBLIC_MAINTENANCE_MOD
 
 export const metadata: Metadata = {
   title: "Unravel Malang",
-  description: "Place where you can find all the things about Malang | Designed and Developed by Discord Group Kerja Kelompok",
+  description: "Place where you can find all the things about Malang | Designed and Developed by Discord Group Kerja Kelompok YES",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode}>) {
