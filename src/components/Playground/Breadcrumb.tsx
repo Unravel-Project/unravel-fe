@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "@/components/Playground/Sidebar";
 import { PLAYGROUND_NAVIGATIONS } from "@/lib/constants/playgroundNavigation";
 import {
   Breadcrumb,
@@ -54,19 +53,19 @@ const getCurrentPaths = (pathname: string) => {
   return currentPaths
 }
 
-const BreadcrumbSection = ({ pathname }: { pathname: string }) => {
+const BreadcrumbSection = ({ pathname = '' }: { pathname?: string }) => {
   const currentPaths = getCurrentPaths(pathname)
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-            <BreadcrumbLink url="/">Home</BreadcrumbLink>
+            <BreadcrumbLink href="/playground">Playground</BreadcrumbLink>
         </BreadcrumbItem>
         {currentPaths.map(item => (
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-                <BreadcrumbLink url={item.url}>{item.menuName}</BreadcrumbLink>
+                <BreadcrumbLink href={item.url}>{item.menuName}</BreadcrumbLink>
             </BreadcrumbItem>
           </>
         ))}

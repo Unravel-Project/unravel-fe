@@ -4,7 +4,7 @@ import React from "react";
 const Sidebar = ({ navigationList }: { navigationList: MenuProps[] }) => {
   return (
     <div className="w-72 bg-neutral-coolgray-100 h-screen px-5 py-4 flex flex-col gap-5">
-      <h1 className="text-xl text-neutral-coolgray-900 font-bold">Unravel Playground</h1>
+      <h1 className="text-lg text-neutral-coolgray-900 font-bold">Unravel Playground</h1>
       <div className="flex flex-col gap-2">
         {navigationList.map((nav, index) => (
           <React.Fragment key={`navigation-${index}`}>

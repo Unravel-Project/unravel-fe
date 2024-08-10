@@ -1,15 +1,15 @@
 export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
   {
-    menuName: 'Playground',
-    url: '/playground',
-  },
-  {
     menuName: 'Colors',
     url: '/playground/colors',
   },
   {
+    menuName: 'Icons',
+    url: '/playground/icons',
+  },
+  {
     menuName: 'Components',
-    url: '/playground/components',
+    url: '#',
     children: [
       {
         menuName: 'Breadcrumb',
