@@ -9,16 +9,14 @@ const PlaygroundLayout = ({ children }: { children: React.ReactNode }) => {
 
 
   return (
-    <div className="w-full flex">
+    <div className="w-full flex max-h-screen overflow-hidden">
       <Sidebar navigationList={PLAYGROUND_NAVIGATIONS} />
-      <div className="flex flex-col px-5 py-4 gap-5">
+      <div className="flex flex-col grow">
         <BreadcrumbSection pathname={pathname} />
-        <div className="flex-col gap-2">
-          <h1></h1>
+        <div className="flex-col gap-2 max-h-screen overflow-y-scroll p-4">
           {children}
         </div>
       </div>
-      
     </div>
   )
 };

@@ -7,9 +7,10 @@ interface BasePageProps {
   pageTitle: string;
   pageDescription?: string;
   docUrl?: string;
+  withPreview?: boolean;
 }
 
-const BasePage = ({ children, pageTitle, docUrl, pageDescription = '' }: BasePageProps) => {
+const BasePage = ({ children, pageTitle, docUrl, pageDescription = '', withPreview = true }: BasePageProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
@@ -18,7 +19,9 @@ const BasePage = ({ children, pageTitle, docUrl, pageDescription = '' }: BasePag
         <div className="my-1">{pageDescription}</div>
       </div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-xl text-neutral-coolgray-900 font-bold">Preview</h2>
+        {withPreview && (
+          <h2 className="text-2xl text-neutral-coolgray-900 font-bold">Preview</h2>
+        )}
         {children}
       </div>
     </div>
