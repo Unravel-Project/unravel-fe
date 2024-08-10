@@ -23,11 +23,11 @@ const Header: React.FC = () => {
 }
 
 const MenuItem = (props: MenuProps) => {
-    const { menuName, target, url } = props;
+    const { menuName, url } = props;
 
     return (
         <li className="flex items-center w-fit px-5 py-3">
-            <a href={url} target={target}>{ menuName }</a>
+            <a href={url}>{ menuName }</a>
         </li>
     );
 }

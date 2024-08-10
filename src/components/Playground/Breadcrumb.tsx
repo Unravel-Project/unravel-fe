@@ -16,7 +16,7 @@ const findCurrentPaths = (
 ): MenuProps[] | null => {
   for (const nav of navMenus) {
     // Create a new path array including the current item
-    const currentPath: TSidebarItem[] = [
+    const currentPath: MenuProps[] = [
       ...path,
       { menuName: nav.menuName, url: nav.url, children: undefined },
     ]
