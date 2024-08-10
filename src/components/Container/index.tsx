@@ -15,7 +15,7 @@ const Container: React.FC<{ children: ReactNode }> = ({ children }) => {
     } = useContainer();
 
     return (
-        <main className="bg-[#F1F4F6] min-h-[500px] w-full">
+        <main className="bg-[#F1F4F6] min-h-screen w-full">
             <Suspense fallback={<Loading />}>
                 <QueryClientProvider client={queryClient}>
                     <LayoutContext.Provider
