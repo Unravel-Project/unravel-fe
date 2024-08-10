@@ -140,7 +140,7 @@ const ColorsPage = () => {
           <h2 className="text-2xl text-neutral-coolgray-900 font-bold">{group.groupName}</h2>
           <div className="grid grid-cols-8 gap-4">
             {group.list.map((list, listIndex) => (
-              <div className="rounded-lg h-40 shadow-md" key={`color-list-${listIndex}`}>
+              <div className="rounded-lg min-h-40 h-fit shadow-md" key={`color-list-${listIndex}`}>
                 <div className={`h-20 ${list.className} rounded-t-lg`} />
                 <div className="flex flex-col p-4">
                   <div className="font-bold">{list.label}</div>
