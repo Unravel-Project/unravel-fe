@@ -1,7 +1,7 @@
 "use client";
 import "@/app/maintenance.css";
 
-const MaintenancePage: React.FC = () => {
+const MaintenanceLayout: React.FC = () => {
     return (
         <div className="maintenance-wrapper">
             <div className="logo">
@@ -24,4 +24,4 @@ const MaintenancePage: React.FC = () => {
     )
 }
 
-export default MaintenancePage;
+export default MaintenanceLayout;
