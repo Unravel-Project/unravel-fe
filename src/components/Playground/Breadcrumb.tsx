@@ -56,7 +56,7 @@ const getCurrentPaths = (pathname: string) => {
 const BreadcrumbSection = ({ pathname = '' }: { pathname?: string }) => {
   const currentPaths = getCurrentPaths(pathname)
   return (
-    <Breadcrumb>
+    <Breadcrumb className="p-4">
       <BreadcrumbList>
         <BreadcrumbItem>
             <BreadcrumbLink href="/playground">Playground</BreadcrumbLink>
