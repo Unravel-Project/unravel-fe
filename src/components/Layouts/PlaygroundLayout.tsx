@@ -13,7 +13,7 @@ const PlaygroundLayout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar navigationList={PLAYGROUND_NAVIGATIONS} />
       <div className="flex flex-col grow">
         <BreadcrumbSection pathname={pathname} />
-        <div className="flex-col gap-2 max-h-screen overflow-y-scroll p-4">
+        <div className="flex-col gap-2 max-h-screen overflow-y-scroll py-4 px-6">
           {children}
         </div>
       </div>

@@ -14,8 +14,10 @@ const BasePage = ({ children, pageTitle, docUrl, pageDescription = '', withPrevi
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
-        <h1 className="text-3xl text-neutral-coolgray-900 font-bold">{pageTitle}</h1>
-        {docUrl && <Link href={docUrl} className="flex items-center" target="_blank">Docs <ArrowTopRightIcon /></Link>}
+        <div className="flex gap-3 items-center">
+          <h1 className="text-3xl text-neutral-coolgray-900 font-bold">{pageTitle}</h1>
+          {docUrl && <Link href={docUrl} className="flex items-center" target="_blank">Docs <ArrowTopRightIcon /></Link>}
+        </div>
         <div className="my-1">{pageDescription}</div>
       </div>
       <div className="flex flex-col gap-4">
