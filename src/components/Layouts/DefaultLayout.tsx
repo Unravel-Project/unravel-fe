@@ -6,14 +6,16 @@ import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import { usePathname } from "next/navigation";
 import PlaygroundLayout from "./PlaygroundLayout";
+import CreditLayout from "./CreditLayout";
 import MaintenancePage from "@/components/Layouts/MaintenanceLayout";
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
-  const isPlayground = pathname.includes('playground');
-  const whiteListPage = ["playground"];
+  const pathname: string[] = usePathname();
+  const isPlayground: boolean = pathname.includes('playground');
+  const isCreditPage: boolean = pathname.includes('credits');
+  const whiteListPage: string[] = ["/playground", "/credits"];
   const isMaintenanceMode: boolean = String(process.env.NEXT_PUBLIC_MAINTENANCE_MODE) === '1';
-
+  
   return (
     <Container>
       {isPlayground && (
@@ -21,13 +23,20 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </PlaygroundLayout>
       )}
-      {isMaintenanceMode && !isPlayground && (
+      {isCreditPage && (
+        <CreditLayout>
+          {children}
+        </CreditLayout>
+      )}
+      {isMaintenanceMode && !isPlayground && !whiteListPage.includes(pathname) && (
         <MaintenancePage />
       )}
-      {!isPlayground && !isMaintenanceMode && (
+      {!isPlayground && !isMaintenanceMode && !isCreditPage && (
         <>
           <Header />
-          {children}
+            <div className="mainbody">
+              {children}
+            </div>
           <Footer />
         </>
       )}
