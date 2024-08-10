@@ -36,7 +36,6 @@ const config: Config = {
           100: '#FFF9EB',
         },
         neutral: {
-          white: '#755100',
           coolgray: {
             900: '#22242A',
             800: '#393D46',

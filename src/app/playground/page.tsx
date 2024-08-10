@@ -1,6 +1,6 @@
-const Playground: React.FC = () => {
+const Playground = () => {
   return (
-      <div className="text-primary-500">asdasd</div>
+    <>Playground</>
   )
 }
 
