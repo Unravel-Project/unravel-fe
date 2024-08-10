@@ -129,32 +129,32 @@ const COLOR_LIST = [
 ]
 
 const ColorsPage = () => {
-    return (
-      <BasePage
-        pageTitle="Colors"
-        pageDescription="This page displays the application's color palette, providing an overview of the primary, secondary, and accent colors used throughout the design"
-        withPreview={false}
-      >
-        {COLOR_LIST.map((group, index) => (
-          <div className="flex flex-col gap-4 w-full mb-4" key={`color-group-${index}`}>
-            <h2 className="text-2xl text-neutral-coolgray-900 font-bold">{group.groupName}</h2>
-            <div className="grid grid-cols-8 gap-4">
-              {group.list.map((list, listIndex) => (
-                <div className="rounded-lg h-40 shadow-md" key={`color-list-${listIndex}`}>
-                  <div className={`h-20 ${list.className} rounded-t-lg`} />
-                  <div className="flex flex-col p-4">
-                    <div className="font-bold">{list.label}</div>
-                    <div className="text-neutral-coolgray-700">{list.hex}</div>
-                  </div>
+  return (
+    <BasePage
+      pageTitle="Colors"
+      pageDescription="This page displays the application's color palette, providing an overview of the primary, secondary, and accent colors used throughout the design"
+      withPreview={false}
+    >
+      {COLOR_LIST.map((group, index) => (
+        <div className="flex flex-col gap-4 w-full mb-4" key={`color-group-${index}`}>
+          <h2 className="text-2xl text-neutral-coolgray-900 font-bold">{group.groupName}</h2>
+          <div className="grid grid-cols-8 gap-4">
+            {group.list.map((list, listIndex) => (
+              <div className="rounded-lg h-40 shadow-md" key={`color-list-${listIndex}`}>
+                <div className={`h-20 ${list.className} rounded-t-lg`} />
+                <div className="flex flex-col p-4">
+                  <div className="font-bold">{list.label}</div>
+                  <div className="text-neutral-coolgray-700">{list.hex}</div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        ))}
-        
-      </BasePage>
-    )
-  }
-  
-  export default ColorsPage;
+        </div>
+      ))}
+      
+    </BasePage>
+  )
+}
+
+export default ColorsPage;
   
