@@ -3,7 +3,7 @@
 import Button from "@/components/Button";
 import BasePage from "@/components/Playground/BasePage";
 import { Skeleton } from "@/components/ui/skeleton"
-import { useZustand } from "@/lib/store/useZustand";
+import { useZustand } from "@/lib/store/zustandstore";
 import { useRouter } from "next/navigation";
 
 const ZustandPage = () => {

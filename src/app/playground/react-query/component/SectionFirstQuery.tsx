@@ -1,10 +1,10 @@
 import InputSearch from "@/components/Input/InputSearch";
 import InputSelect from "@/components/Input/InputSelect";
 import Table from "@/components/Table";
-import { columns } from "../../../../configs/table";
+import { columns } from "../config/table";
 import { useContext } from "react";
 import { MainContext } from "../context/Provider";
-import { optionType } from "../../../../configs/option";
+import { optionType } from "../config/option";
 import { TFilterSelect } from "../../../model.app";
 
 const SectionFirstQuery: React.FC = () => {
