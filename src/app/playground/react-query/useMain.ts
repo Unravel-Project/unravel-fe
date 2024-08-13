@@ -48,6 +48,7 @@ export const useMain = () => {
             sortBy: sort.sortBy as TSortBy,
         }),
         placeholderData: keepPreviousData,
+        refetchOnWindowFocus: false,
     })
 
     const { mutate, isPending, data: dataMutation } = useMutation({ mutationFn: getPosts });

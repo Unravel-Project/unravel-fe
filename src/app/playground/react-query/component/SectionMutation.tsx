@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MainContext } from "../contexts/Provider";
+import { MainContext } from "../context/Provider";
 import Table from "@/components/Table";
-import { columns } from "../configs/table";
+import { columns } from "../../../../configs/table";
 import Button from "@/components/Button";
 
 const SectionMutation: React.FC = () => {
