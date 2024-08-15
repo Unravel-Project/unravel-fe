@@ -28,6 +28,11 @@ const config: Config = {
           200: '#A5E5D4',
           100: '#E8F9F4',
         },
+        negative: {
+          500: '#981B1B',
+          400: '#DD2222',
+          100: '#FECACA',
+        },
         accent: {
           500: '#755100',
           400: '#E3C37A',
