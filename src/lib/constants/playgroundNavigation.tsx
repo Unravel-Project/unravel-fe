@@ -31,6 +31,10 @@ export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
         menuName: 'Separator',
         url: '/playground/components/separator',
       },
+      {
+        menuName: 'Tooltip',
+        url: '/playground/components/tooltip',
+      },
     ]
   },
   {
