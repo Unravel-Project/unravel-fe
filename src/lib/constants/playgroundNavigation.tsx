@@ -33,4 +33,12 @@ export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
       },
     ]
   },
+  {
+    menuName: 'Zustand',
+    url: '/playground/zustand',
+  },
+  {
+    menuName: 'React Query',
+    url: '/playground/react-query',
+  },
 ];
