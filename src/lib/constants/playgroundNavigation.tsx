@@ -23,6 +23,10 @@ export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
         menuName: 'Skeleton',
         url: '/playground/components/skeleton',
       },
+      {
+        menuName: 'Card',
+        url: '/playground/components/card',
+      },
     ]
   },
 ];
