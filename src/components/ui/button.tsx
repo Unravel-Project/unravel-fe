@@ -17,7 +17,8 @@ const buttonVariants = cva(
         "secondary-negative": "border-2 border-neutral-coolgray-400 text-negative-400 hover:bg-negative-100",
         "tertiary-negative": "border-2 border-negative-400 text-negative-400 hover:bg-negative-100",
         "ghost-negative": "text-negative-400 hover:text-negative-500",
-        "link": "text-primary underline-offset-4 hover:underline",
+        "link": "text-primary-400 underline-offset-2	hover:underline",
+        "negative-link": "text-negative-400 underline-offset-2	hover:underline",
       },
       "size": {
         "xl": "h-fit px-4 py-3.5 text-lg rounded-lg",
@@ -49,7 +50,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, disabled, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    const disabledStyle = disabled ? (variant?.includes('ghost') ? 'ghost' : 'primary') : undefined;
+    const disabledStyle = disabled ? ((variant?.includes('ghost') || variant?.includes('link')) ? 'ghost' : 'primary') : undefined;
 
     return (
       <Comp

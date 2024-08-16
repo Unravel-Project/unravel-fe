@@ -30,12 +30,21 @@ const ButtonPage = () => {
         </div>
 
         <div className="space-y-2">
+          <h3>Link</h3>
+          <div className="flex gap-2">
+            <Button variant="link">Active</Button>
+            <Button variant="negative-link">Negative</Button>
+          </div>
+        </div>
+
+        <div className="space-y-2">
           <h3>Disabled</h3>
           <div className="flex gap-2">
             <Button variant="primary" disabled>Primary</Button>
             <Button variant="secondary" disabled>Secondary</Button>
             <Button variant="tertiary" disabled>Tertiary</Button>
             <Button variant="ghost" disabled>Ghost</Button>
+            <Button variant="link" disabled>Link</Button>
           </div>
         </div>
 
