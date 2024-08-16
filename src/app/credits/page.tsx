@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
-import mainLogo from "../../../public/main-logo.png";
 import "./styles.css";
+import CONTRIBUTORS from "./constants/contributors";
 
 const Credits = () => {
   return (
@@ -14,8 +13,36 @@ const Credits = () => {
                 Your dedication has truly made a difference, and we are grateful for your invaluable contributions
             </p>
         </div>
-        <Image src={mainLogo} alt="main-logo" />
+        <div className="bumper">
+          <span>UNRAVEL</span>
+          <span>Malang</span>
+          <span>proudly</span>
+          <span>present</span>
+        </div>
+        <div className="credit-content">
+          <h1>contributors</h1>
+          { CONTRIBUTORS.map(item => <CreditItem {...item} /> )}
+        </div>
     </div>
+  )
+}
+
+function CreditItem(props: Contributors): React.ReactNode {
+  const { department, contributors } = props;
+  return (
+    <div className="credit-item">
+      <h3>{ department }</h3>
+      <ol>
+        {contributors.map(person => <CreditName {...person} />)}
+      </ol>
+    </div>
+  )
+}
+
+function CreditName(props: UnravelTeam): React.ReactNode {
+  const { name, socialMedia } = props;
+  return (
+    <li>{name}</li>
   )
 }
 
