@@ -5,7 +5,7 @@ const CreditLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className="w-full min-h-screen overflow-x-hidden bg-[#CCD3CA]">
+    <div className="w-full min-h-screen overflow-x-hidden bg-black">
         {children}
     </div>
   )

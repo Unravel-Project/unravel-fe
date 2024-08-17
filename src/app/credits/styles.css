@@ -11,6 +11,7 @@
 .credit-intro {
     text-align: center;
     width: min(100%, 640px);
+    padding: 0 24px;
 }
 
 .credit-intro > h2 {
@@ -53,7 +54,19 @@
 }
 
 .credit-content {
-    padding: 3rem 0;
+    padding: 3rem 24px;
+    width: min(100%, 800px);
+}
+
+.credit-content > h2 {
+    text-transform: uppercase;
+    color: #747264;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-align: center;
 }
 
 .credit-content > h1 {
@@ -64,41 +77,157 @@
     line-height: 1;
     margin: 0 0 3rem 0;
     letter-spacing: -0.5px;
+    text-align: center;
 }
 
-.credit-content > .credit-item {
+.credit-content > .credit-category {
     display: flex;
     gap: 2rem;
     padding: 1.5rem 0;
     justify-content: center;
+    align-items: center;
 }
 
-.credit-content > .credit-item > h3 {
-    flex: 1;
+.credit-content > .credit-category > h3 {
+    flex-basis: 40%;
     text-align: right;
-    font-size: 28px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: 600;
     line-height: 1;
-    color: #747474;
+    color: #747264;
 }
 
-.credit-content > .credit-item > ol {
-    flex-basis: 50%;
+.credit-content > .credit-category > .credit-user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    flex: 1;
+    gap: 8px 4px;
+    padding: 16px;
+    border-left: 1px solid #333;
+}
+
+.credit-content > .credit-category > .credit-user > figure {
+    width: 64px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.15s ease-out;
+}
+
+.credit-content > .credit-category > .credit-user > figure:first-child {
+    margin-left: 0;
+}
+
+.credit-content > .credit-category > .credit-user > figure:hover {
+    
+}
+
+.credit-content > .credit-category > .credit-user:hover > figure:not(:hover) {
+    filter: grayscale(1);
+}
+
+.credit-content > .credit-category > .credit-user > figure > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.credit-content > .credit-category > .credit-user > figure > figcaption {
+    width: 128px;
+    height: auto;
+    padding: 12px;
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 64px);
+    border-radius: 8px;
+    z-index: 1;
+    filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.24));
+    transform-origin: bottom;
+    transform: rotate(-45deg) scale(0) translateY(0);
+}
+
+.credit-content > .credit-category > .credit-user > figure:hover > figcaption {
+    animation: fgcaption 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.credit-content > .credit-category > .credit-user > figure > figcaption::after {
+    display: block;
+    content: '';
+    position: absolute;
+    background: inherit;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    clip-path: polygon(50% 100%, 29% 0, 70% 0);
+    z-index: 1;
+}
+
+.credit-content > .credit-category > .credit-user > figure > figcaption > label {
+    font-size: 14px;
+    color: #555;
+    line-height: 1;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.credit-content > .credit-category > .credit-user > figure > figcaption > ol {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    gap: 8px 0;
+    align-items: center;
+    gap: 0 5px;
 }
 
-.credit-content > .credit-item > ol > li {
-    list-style-type: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: 600;
-    line-height: 1;
-    color: #747474;
+.credit-content > .credit-category > .credit-user > figure > figcaption > ol > li {
+    list-style: none;
+}
+
+@media screen and (max-width: 992px) {
+    .credit-content > h2 {
+        font-size: 18px;
+    }
+    
+    .credit-content > h1 {
+        font-size: 36px;
+    }
+    
+    .credit-content > .credit-category {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .credit-content > .credit-category > h3 {
+        flex-basis: unset;
+        text-align: center;
+        font-size: 20px;
+        color: #747474;
+    }
+    
+    .credit-content > .credit-category > .credit-user {
+        border-left: unset;
+        justify-content: center;
+    }
+}
+
+@keyframes fgcaption {
+    0% {
+        transform: rotate(-45deg) scale(0) translateY(0);
+    } 10% {
+        transform: rotate(-45deg) scale(0.5) translateY(-160px);
+    } 40% {
+        transform: rotate(15deg) scale(1) translateY(-75px);
+    } 70% {
+        transform: rotate(-15deg) scale(1) translateY(-75px);
+    } 90% {
+        transform: rotate(5deg) scale(1) translateY(-65px);
+    } 100% {
+        transform: rotate(0deg) scale(1) translateY(-65px);
+    }
 }

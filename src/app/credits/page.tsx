@@ -1,8 +1,13 @@
 "use client";
 import "./styles.css";
 import CONTRIBUTORS from "./constants/contributors";
+import Image from "next/image";
+import Link from "next/link";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import placeholderUser from "../../../public/user.png";
+import { TbWorldWww } from "react-icons/tb";
 
-const Credits = () => {
+const Credits = ():React.ReactNode => {
   return (
     <div className="credit-panel">
         <div className="credit-intro">
@@ -13,37 +18,50 @@ const Credits = () => {
                 Your dedication has truly made a difference, and we are grateful for your invaluable contributions
             </p>
         </div>
-        <div className="bumper">
-          <span>UNRAVEL</span>
-          <span>Malang</span>
-          <span>proudly</span>
-          <span>present</span>
-        </div>
         <div className="credit-content">
-          <h1>contributors</h1>
-          { CONTRIBUTORS.map(item => <CreditItem {...item} /> )}
+          <h2 className="text-center">Unravel Malang</h2>
+          <h1 className="text-center">contributors</h1>
+          {CONTRIBUTORS.map((item, idx) => <CreditUser {...item} key={`cat-${idx}`}/> )}
         </div>
     </div>
   )
 }
 
-function CreditItem(props: Contributors): React.ReactNode {
+const CreditUser = (props:Contributors):React.ReactNode => {
   const { department, contributors } = props;
   return (
-    <div className="credit-item">
+    <div className="credit-category">
       <h3>{ department }</h3>
-      <ol>
-        {contributors.map(person => <CreditName {...person} />)}
-      </ol>
+      <div className="credit-user">
+        {contributors.map((item, idx) => <CreditUserItem {...item} key={`${department}-${idx}`}/>)}
+      </div>
     </div>
-  )
+  );
 }
 
-function CreditName(props: UnravelTeam): React.ReactNode {
-  const { name, socialMedia } = props;
+const CreditUserItem = (props: UnravelTeam):React.ReactNode => {
+  const { name, socialMedia, image } = props;
   return (
-    <li>{name}</li>
-  )
+    <figure>
+      <Image src={image || placeholderUser} alt="image-contributors" />
+      <figcaption>
+        <label>{ name }</label>
+        <ol>
+          <li>
+            <Link href={socialMedia.instagram || ''}><InstagramLogoIcon /></Link>
+          </li>
+          <li>
+            <Link href={socialMedia.github || ''}><GitHubLogoIcon /></Link>
+          </li>
+          <li>
+            <Link href={socialMedia.linkedin || ''}><LinkedInLogoIcon /></Link>
+          </li>
+          <li>
+            <Link href={socialMedia.website || ''}><TbWorldWww /></Link>
+          </li>
+        </ol>
+      </figcaption>
+    </figure>
+  );
 }
-
 export default Credits;

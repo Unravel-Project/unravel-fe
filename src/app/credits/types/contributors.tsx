@@ -1,6 +1,12 @@
 interface UnravelTeam {
     name: string;
-    socialMedia?: string[];
+    socialMedia?: {
+        instagram?: string,
+        github?: string,
+        linkedin?: string,
+        website?: string,
+    };
+    image?: string;
 }
 
 interface Contributors {
