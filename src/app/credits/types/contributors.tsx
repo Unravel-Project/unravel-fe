@@ -1,5 +1,5 @@
 interface UnravelTeam {
-    name: string;
+    name?: string;
     socialMedia?: {
         instagram?: string,
         github?: string,

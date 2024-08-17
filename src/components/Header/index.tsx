@@ -11,6 +11,7 @@ import {
     NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import mainLogo from '../../../public/main-logo.png';
+import { cn } from "@/lib/utils";
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -130,7 +131,7 @@ export function NavigationMenuDemo() {
       </NavigationMenu>
     )
 }
-   
+
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">

@@ -48,16 +48,16 @@ const CreditUserItem = (props: UnravelTeam):React.ReactNode => {
         <label>{ name }</label>
         <ol>
           <li>
-            <Link href={socialMedia.instagram || ''}><InstagramLogoIcon /></Link>
+            <Link href={socialMedia?.instagram || ''}><InstagramLogoIcon /></Link>
           </li>
           <li>
-            <Link href={socialMedia.github || ''}><GitHubLogoIcon /></Link>
+            <Link href={socialMedia?.github || ''}><GitHubLogoIcon /></Link>
           </li>
           <li>
-            <Link href={socialMedia.linkedin || ''}><LinkedInLogoIcon /></Link>
+            <Link href={socialMedia?.linkedin || ''}><LinkedInLogoIcon /></Link>
           </li>
           <li>
-            <Link href={socialMedia.website || ''}><TbWorldWww /></Link>
+            <Link href={socialMedia?.website || ''}><TbWorldWww /></Link>
           </li>
         </ol>
       </figcaption>

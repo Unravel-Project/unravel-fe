@@ -10,7 +10,7 @@ import CreditLayout from "./CreditLayout";
 import MaintenancePage from "@/components/Layouts/MaintenanceLayout";
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
-  const pathname: string[] = usePathname();
+  const pathname: string = usePathname();
   const isPlayground: boolean = pathname.includes('playground');
   const isCreditPage: boolean = pathname.includes('credits');
   const whiteListPage: string[] = ["/playground", "/credits"];

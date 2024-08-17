@@ -4,27 +4,57 @@ const CONTRIBUTORS: Contributors[] = [
         contributors: [
             {
                 name: 'Rizal Maulana F',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Geo PW',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Henrico VP',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'A M Satrio W',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Pradana Tomy S',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Gerry P',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             }
         ]
@@ -33,19 +63,39 @@ const CONTRIBUTORS: Contributors[] = [
         contributors: [
             {
                 name: 'Sesilia Fajar',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Iga Indra P',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Bagus Andika',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Andhika Stya',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             }
         ]
@@ -54,31 +104,66 @@ const CONTRIBUTORS: Contributors[] = [
         contributors: [
             {
                 name: 'Nur Ikhwan A',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Tito Oktavian',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Ryan Ramadhani',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Alfian Try P',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Felicia Christiany',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Teddy S',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Galuh Ramadhan',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             }
         ]
@@ -87,19 +172,39 @@ const CONTRIBUTORS: Contributors[] = [
         contributors: [
             {
                 name: 'Galuh Ramadhan',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Gerry P',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Galih',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'A M Satrio W',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             }
         ]
@@ -108,11 +213,21 @@ const CONTRIBUTORS: Contributors[] = [
         contributors: [
             {
                 name: 'Henrico VP',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             },{
                 name: 'Wahyu Elfan Bojo Loro',
-                socialMedia: [],
+                socialMedia: {
+                    instagram: undefined,
+                    github: undefined,
+                    linkedin: undefined,
+                    website: undefined,
+                },
                 image: '',
             }
         ]
