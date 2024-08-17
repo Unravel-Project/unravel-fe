@@ -16,6 +16,10 @@ export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
         url: '/playground/components/breadcrumb',
       },
       {
+        menuName: 'Button',
+        url: '/playground/components/button',
+      },
+      {
         menuName: 'Input Search',
         url: '/playground/components/input-search',
       },

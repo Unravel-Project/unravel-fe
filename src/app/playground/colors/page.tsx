@@ -62,6 +62,26 @@ const COLOR_LIST = [
     ]
   },
   {
+    groupName: 'Negative',
+    list: [
+      {
+        label: 'Negative 500',
+        hex: '#981B1B',
+        className: 'bg-negative-500'
+      },
+      {
+        label: 'Negative 400',
+        hex: '#DD2222',
+        className: 'bg-negative-400'
+      },
+      {
+        label: 'Negative 100',
+        hex: '#FECACA',
+        className: 'bg-negative-100'
+      },
+    ]
+  },
+  {
     groupName: 'Accent',
     list: [
       {
