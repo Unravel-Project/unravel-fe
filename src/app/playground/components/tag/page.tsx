@@ -12,14 +12,14 @@ const tagList = [
     { id: 5, name: 'tag 5' },
 ]
 
-const AccordionPage = () => {
+const TagPage = () => {
     const [selected, setSelected] = useState<number | undefined>();
 
     return (
         <BasePage
-            pageTitle="Accordion"
-            pageDescription="Displays a accordion or a component that looks like a accordion."
-            docUrl="https://ui.shadcn.com/docs/components/accordion"
+            pageTitle="Tag"
+            pageDescription="Displays a tag or a component that looks like a tag."
+            docUrl="https://ui.shadcn.com/docs/components/badge"
         >
             <div className="flex flex-col space-y-3">
                 <div className="space-y-2">
@@ -60,4 +60,4 @@ const AccordionPage = () => {
     )
 }
 
-export default AccordionPage;
+export default TagPage;
