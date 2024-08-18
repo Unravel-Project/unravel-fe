@@ -39,6 +39,18 @@ export const PLAYGROUND_NAVIGATIONS:MenuProps[] = [
         menuName: 'Tooltip',
         url: '/playground/components/tooltip',
       },
+      {
+        menuName: 'Loading',
+        url: '/playground/components/loading',
+      },
+      {
+        menuName: 'Accordion',
+        url: '/playground/components/accordion',
+      },
+      {
+        menuName: 'Tag',
+        url: '/playground/components/tag',
+      },
     ]
   },
   {

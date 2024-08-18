@@ -1,7 +1,7 @@
 'use client'
 
-import Button from "@/components/Button";
 import BasePage from "@/components/Playground/BasePage";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton"
 import { useZustand } from "@/lib/store/zustandstore";
 import { useRouter } from "next/navigation";
@@ -25,11 +25,13 @@ const ZustandPage = () => {
         <div
           className="flex items-center gap-4 w-full p-10 text-black"
         >
-          <Button label="-" variant="primary" onClick={decreaseData} />
+          <Button variant="primary" onClick={decreaseData}>-</Button>
           <p>{data?.value || 0}</p>
-          <Button variant="primary" label="+" onClick={increaseData} />
+          <Button variant="primary" onClick={increaseData}>+</Button>
         </div>
-        <Button customClass="mt-2 w-max" variant="primary" label="go to zustand other page" onClick={() => router.push('/playground/zustand-other')} />
+        <Button className="mt-2 w-max" variant="primary" onClick={() => router.push('/playground/zustand-other')}>
+          go to zustand other page
+        </Button>
       </div>
     </BasePage>
   )

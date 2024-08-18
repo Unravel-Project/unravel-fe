@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MainContext } from "../context/Provider";
 import Table from "@/components/Table";
 import { columns } from "../config/table";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 
 const SectionMutation: React.FC = () => {
     const {
@@ -19,8 +19,9 @@ const SectionMutation: React.FC = () => {
                 <Button
                     variant="primary"
                     onClick={handleGetData}
-                    label="Get Data"
-                />
+                >
+                    Get Data
+                </Button>
             </div>
 
             <div className="w-full px-4">
