@@ -3,4 +3,5 @@ interface MenuProps {
     url: string;
     children?: MenuProps[];
     description?: string;
+    thumbnail?: string;
 };
