@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import { Toaster } from "@/components/ui/toaster";
 import { DM_Sans } from 'next/font/google'
 import "./globals.css";
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={DMSans.className}>
       <body>
+        <Toaster />
         <DefaultLayout>{children}</DefaultLayout>
       </body>
     </html>
