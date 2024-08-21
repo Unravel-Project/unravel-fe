@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                         <h3 className="text-md uppercase mb-7">Directories</h3>
                         <ul className="flex flex-row gap-x-10">
                             {
-                                directories.children.map((menu,index) => {
+                                directories?.children?.map((menu,index) => {
                                     return (
                                         <li key={`footernav-${index}`}>
                                             <label className="text-sm uppercase text-accent-400 block mb-5">{ menu.menuName }</label>
